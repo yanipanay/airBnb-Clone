@@ -7,5 +7,5 @@ searchButton.addEventListener("click", (e) => {
   const searchInput = document.getElementById("search-input").value;
   // searchLocation(searchInput);
   localStorage.setItem("location", searchInput);
-  window.open("http://127.0.0.1:5500/listing.html", "_blank");
+  window.open("./listing.html", "_blank");
 });

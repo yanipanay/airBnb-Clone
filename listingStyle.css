@@ -1,0 +1,284 @@
+/* ----------- listing page---- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px -1px 0px 0px #F3F4F6 inset;
+}
+
+header .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+header .searchDetails, header .menu{
+    display: flex;
+}
+
+header .item{
+    padding: 0px 16px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.searchDetails, .menu, .login{
+    display: flex;
+    align-items: center;
+}
+
+.searchDetails{
+    border-radius: 30px;
+    border: 1px solid #E5E7EB ;
+    padding: 10px 10px;
+    box-shadow: #E5E7EB 1px 1px 10px;
+}
+.left-b{
+    border-left:1px solid #E5E7EB;;
+}
+header .search{
+    background-color: #DE3151;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+header .login{
+    padding: 8px 8px 8px 16px;
+    gap:8px;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px ;
+}
+
+.filters{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.filter-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E7EB;
+    border-radius: 30px;
+    padding: 10px 16px;
+    box-shadow: 0px 1px 2px 0px rgba(31, 41, 55, 0.08);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.left-col{
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    height: 80vh;
+    scroll-bar:none;
+}
+
+.left-col ::-webkit-scrollbar{
+    display: none;
+} 
+
+.house-card{
+    position: relative;
+    display: flex;
+    height: 250px;
+    width: 100%;
+    padding: 16px;
+    border-radius:20px;
+    box-shadow: 2px 2px 5px #E5E7EB;
+    margin-top:5px ;
+}
+
+.house-card p{
+    color: #6B7280;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+}
+
+.title p{
+    color: #000;
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 5px;
+}
+.house-card h3{
+    color: #6B7280;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.house-dp{
+    flex-basis: 40%;
+    max-width: 50%;
+}
+
+.house-dp img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.house-details{
+    flex-basis: 60%;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.house-card .numbers, .ratings, .price{
+    display: flex;
+    flex-direction: row;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.numbers{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    display: flex;
+    justify-content:space-between;
+}
+
+.heart{
+    cursor: pointer;
+}
+
+.white{
+    display: block;
+}
+
+.pink{
+    display: none;
+}
+
+#gmp-map {
+    height: 617px;
+    width: 600px;
+    background-color: #DE3151;
+}
+
+.superHost{
+    position: absolute;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    left:30px;
+    top : 25px;
+    border-radius: 5px;
+    border: 1px solid #E5E7EB;
+    z-index: 1;
+    box-shadow: 2xp 2px 5px #6B7280;
+}
+
+.cardBtn{
+    padding: 3px;
+    background-color: #E24C68;
+    border-radius: 3px;
+    border: 0;
+    color:white;
+    margin-left: 3px;
+}
+
+.hidden{
+    display: none;
+}
+
+.rareFind{
+    display: flex;
+    gap:10px;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 3px 7px;
+    border-radius: 3px;
+    margin: 5px 0px;
+    font-size:14px ;
+}
+
+.host{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hostDetails{
+    display: flex;
+    align-items: center;
+}
+.hostDetails img{
+    width: 30px;
+    border-radius: 15px;
+}
+
+
+
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    width: 400px;
+    height: 200px;
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+   /* Could be more or less, depending on screen size */
+    }
+    
+    /* The Close Button */
+    .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    }
+
+.modal .matter{
+    line-height: 30px;
+}

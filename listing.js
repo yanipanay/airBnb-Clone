@@ -27,7 +27,7 @@ const getUserLocation = () => {
 //---------------------------------------------------search location function---------------------------------------------------------------------------------//
 
 async function searchLocation(location) {
-  const url = `https://airbnb13.p.rapidapi.com/search-location?location=${location}&checkin=2023-10-14&checkout=2023-10-15&adults=1&children=0&infants=0&pets=0&page=1&currency=INR`;
+  const url = `https://airbnb13.p.rapidapi.com/search-location?location=${location}&checkin=2023-12-14&checkout=2023-12-15&adults=1&children=0&infants=0&pets=0&page=1&currency=INR`;
   const options = {
     method: "GET",
     headers: {
